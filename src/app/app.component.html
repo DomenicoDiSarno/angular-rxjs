@@ -1,7 +1,9 @@
 <div class="container">
   <div *ngFor="let demo of demoRepository1">
     <div (click)="editPerson(demo.id)">
-      Firstname: {{ demo.firstname }}
+      Firstname: {{ demo.firstname }} -
+      Lastname: {{ demo.lastname }} -
+      Description: {{ demo.description }}
     </div>
   </div>
 </div>
