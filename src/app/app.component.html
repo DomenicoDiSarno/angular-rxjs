@@ -1,39 +1,4 @@
-<div class="container">
-  <div *ngFor="let demo of demoRepository1">
-    <div (click)="editPerson(demo.id)">
-      Firstname: {{ demo.firstname }} -
-      Lastname: {{ demo.lastname }} -
-      Description: {{ demo.description }}
-    </div>
-  </div>
-</div>
-
-<hr>
-
-<div class="container">
-  <form [formGroup]="form"
-        (ngSubmit)="submitForm()">
-    <input type="text"
-           name="firstname"
-           formControlName="firstname"
-           placeholder="Firstname">
-    <br>
-    <br>
-    <input type="text"
-           name="lastname"
-           formControlName="lastname"
-           placeholder="Lastname">
-    <br>
-    <br>
-    <textarea name="description"
-              formControlName="description"
-              placeholder="Description">
-    </textarea>
-    <br>
-    <br>
-    <button type="submit">
-      Confirm your data Here
-    </button>
-  </form>
-</div>
-
+<app-header></app-header>
+<main>
+  <router-outlet></router-outlet>
+</main>
