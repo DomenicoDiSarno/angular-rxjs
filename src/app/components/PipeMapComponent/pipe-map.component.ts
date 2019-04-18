@@ -1,26 +1,30 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {Subscription} from 'rxjs';
-import {FirebaseRepositoryService} from '../../services/firebase-repository.service';
+import {PeopleService} from '../../services/people.service';
 
 @Component({
   templateUrl: './pipe-map.component.html',
   styleUrls: ['./pipe-map.component.scss']
 })
 export class PipeMapComponent implements OnInit, OnDestroy {
-  demoRepository1: any[];
+  people: any[];
   form: FormGroup;
 
-  private personSub: Subscription;
+  peopleColumns = [
+    'id', 'firstname', 'lastname', 'description', 'actions'
+    ];
 
-  constructor(protected firebaseRepositoryService: FirebaseRepositoryService) {}
+  private peopleSub: Subscription;
+
+  constructor(private peopleService: PeopleService) {}
 
   ngOnInit(): void {
     this.initForm();
-    this.getDemoRepository1();
-    this.personSub = this.firebaseRepositoryService.personUpdateListener().subscribe(
-      (persons) => {
-        this.demoRepository1 = persons;
+    this.peopleService.getPeople();
+    this.peopleSub = this.peopleService.peopleUpdateListener().subscribe(
+      (people) => {
+        this.people = people;
       }
     );
   }
@@ -28,7 +32,7 @@ export class PipeMapComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     // IMPORTANTE: Ricordarsi sempre di fare l'unsubscribe per il listener in modo da
     // svuotare la memoria temporanea
-    this.personSub.unsubscribe();
+    this.peopleSub.unsubscribe();
   }
 
   initForm() {
@@ -50,7 +54,7 @@ export class PipeMapComponent implements OnInit, OnDestroy {
   }
 
   getDemoRepository1() {
-    this.firebaseRepositoryService.getDemoRepository1();
+    // this.firebaseRepositoryService.getDemoRepository1();
   }
 
   submitForm() {
@@ -65,15 +69,19 @@ export class PipeMapComponent implements OnInit, OnDestroy {
 
     // Effettuo un subscribe per ottenere un messaggio positivo
     // in caso di avvenuto salvataggio utente
-    this.firebaseRepositoryService.saveNewPerson(data).subscribe(
-      (res) => {
-        this.getDemoRepository1();
-      }
-    );
+    // this.firebaseRepositoryService.saveNewPerson(data).subscribe(
+    //   (res) => {
+    //     this.getDemoRepository1();
+    //   }
+    // );
     this.form.reset();
   }
 
   editPerson(id) {
     console.log(id);
+  }
+
+  deletePerson(id) {
+    this.peopleService.deletePerson(id);
   }
 }

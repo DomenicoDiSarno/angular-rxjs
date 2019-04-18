@@ -1,12 +1,34 @@
-<div class="container">
-  <div *ngFor="let demo of demoRepository1">
-    <div (click)="editPerson(demo.id)">
-      Firstname: {{ demo.firstname }} -
-      Lastname: {{ demo.lastname }} -
-      Description: {{ demo.description }}
-    </div>
-  </div>
-</div>
+<mat-table [dataSource]="people">
+  <ng-container matColumnDef="id">
+    <mat-header-cell *matHeaderCellDef>ID</mat-header-cell>
+    <mat-cell *matCellDef="let person">{{person.id}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="firstname">
+    <mat-header-cell *matHeaderCellDef>Firstname</mat-header-cell>
+    <mat-cell *matCellDef="let person">{{person.firstname}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="lastname">
+    <mat-header-cell *matHeaderCellDef>Lastname</mat-header-cell>
+    <mat-cell *matCellDef="let person">{{person.lastname}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="description">
+    <mat-header-cell *matHeaderCellDef>Description</mat-header-cell>
+    <mat-cell *matCellDef="let person">{{person.description}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="actions">
+    <mat-header-cell *matHeaderCellDef></mat-header-cell>
+    <mat-cell *matCellDef="let person">
+      <button mat-button (click)="editPerson(person.id)">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button mat-button (click)="deletePerson(person.id)">
+        <mat-icon>cancel</mat-icon>
+      </button>
+    </mat-cell>
+  </ng-container>
+  <mat-header-row *matHeaderRowDef="peopleColumns"></mat-header-row>
+  <mat-row *matRowDef="let person; columns: peopleColumns"></mat-row>
+</mat-table>
 
 <hr>
 
