@@ -16,58 +16,57 @@ export class AppComponent implements OnInit {
 
   navItems: NavItem[] = [
     {
-      displayName: 'Combinations',
+      displayName: 'Combining Observables',
       iconName: 'list',
-      route: 'combinations',
+      route: 'combining-observables',
       children: [
         {
           displayName: 'combineAll',
-          iconName: 'lens',
-          route: 'combinations/combine-all',
+          route: 'combining-observables/combine-all',
           disabled: true,
         },
         {
           displayName: 'combineLatest',
-          route: 'combinations/combine-latest',
+          route: 'combining-observables/combine-latest',
           disabled: true,
         },
       ]
     },
     {
-      displayName: 'Conditionals',
+      displayName: 'Conditional and Boolean Operators',
       iconName: 'list',
-      route: 'conditionals',
+      route: 'conditional-boolean-operators',
       disabled: true,
       children: [
 
       ]
     },
     {
-      displayName: 'Creation',
+      displayName: 'Creating Observables',
       iconName: 'list',
-      route: 'conditionals',
+      route: 'creating-observables',
       disabled: true,
       children: [
 
       ]
     },
     {
-      displayName: 'Errors Handling',
+      displayName: 'Error Handling Operators',
       iconName: 'list',
-      route: 'errors-handling',
+      route: 'error-handling-operators',
       disabled: true,
       children: [
 
       ]
     },
     {
-      displayName: 'Filtering',
+      displayName: 'Filtering Observables',
       iconName: 'list',
-      route: 'filtering',
+      route: 'filtering-observables',
       children: [
         {
           displayName: 'Filter',
-          route: 'filtering/filter'
+          route: 'filtering-observables/filter'
         }
       ]
     },
@@ -90,21 +89,36 @@ export class AppComponent implements OnInit {
       ]
     },
     {
-      displayName: 'Transformation',
+      displayName: 'Transforming Observables',
       iconName: 'list',
-      route: 'transformation',
-      disabled: true,
+      route: 'transforming-observables',
       children: [
-
+        {
+          displayName: 'Map',
+          route: 'transforming-observables/map'
+        },
+        {
+          displayName: 'Merge Map',
+          route: 'transforming-observables/merge-map',
+          disabled: true
+        },
+        {
+          displayName: 'Switch Map',
+          route: 'transforming-observables/switch-map',
+          disabled: true
+        },
       ]
     },
     {
-      displayName: 'Utility',
+      displayName: 'Utility Operators',
       iconName: 'list',
-      route: 'utility',
-      disabled: true,
+      route: 'utility-operators',
       children: [
-
+        {
+          displayName: 'Do/Tap',
+          route: 'utility-operators/do-tap',
+          disabled: true
+        },
       ]
     }
   ];

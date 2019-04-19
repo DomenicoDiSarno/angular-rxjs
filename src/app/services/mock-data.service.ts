@@ -16,21 +16,21 @@ export class MockDataService implements InMemoryDbService {
       },
       {
         id: 2,
-        firstname: 'Domenico',
-        lastname: 'Di Sarno',
-        description: 'Loves Dogs'
+        firstname: 'Mario',
+        lastname: 'Rossi',
+        description: 'Hates Cats'
       },
       {
         id: 3,
-        firstname: 'Domenico',
-        lastname: 'Di Sarno',
-        description: 'Loves Dogs'
+        firstname: 'John',
+        lastname: 'Doe',
+        description: 'Loves Pizza'
       },
       {
         id: 4,
-        firstname: 'Domenico',
-        lastname: 'Di Sarno',
-        description: 'Loves Dogs'
+        firstname: 'Ingrid',
+        lastname: 'Schmidt',
+        description: 'Hates Dancing'
       },
     ];
 

@@ -14,16 +14,18 @@ import {MaterialModule} from './material.module';
 import {MockDataService} from './services/mock-data.service';
 
 import { AppComponent } from './app.component';
-import {NavListComponent} from './components/NavListComponent/nav-list.component';
-import {PipeFilterComponent} from './components/Operators/PipeFilterComponent/pipe-filter.component';
-import {PipeMapComponent} from './components/Operators/PipeMapComponent/pipe-map.component';
+import {NavListComponent} from './components/nav-list/nav-list.component';
+import {FilterComponent} from './components/categories/filtering/operators/filter/filter.component';
+import {MapComponent} from './components/categories/transforming/operators/map/map.component';
+import {HomeComponent} from './components/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    FilterComponent,
+    HomeComponent,
+    MapComponent,
     NavListComponent,
-    PipeFilterComponent,
-    PipeMapComponent
   ],
   imports: [
     AppRoutingModule,

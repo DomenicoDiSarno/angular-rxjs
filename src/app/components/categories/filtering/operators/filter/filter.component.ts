@@ -1,14 +1,13 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 
-import {PeopleService} from '../../../services/people.service';
-import {FormGroup} from '@angular/forms';
+import {PeopleService} from '../../../../../services/people.service';
 import {Subscription} from 'rxjs';
 
 @Component({
-  templateUrl: './pipe-filter.component.html',
-  styleUrls: ['./pipe-filter.component.scss']
+  templateUrl: './filter.component.html',
+  styleUrls: ['./filter.component.scss']
 })
-export class PipeFilterComponent implements OnInit, OnDestroy {
+export class FilterComponent implements OnInit, OnDestroy {
   people: any[];
   code = `
     deletePerson(id) {

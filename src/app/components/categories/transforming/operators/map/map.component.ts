@@ -1,13 +1,13 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {Subscription} from 'rxjs';
-import {PeopleService} from '../../../services/people.service';
+import {PeopleService} from '../../../../../services/people.service';
 
 @Component({
-  templateUrl: './pipe-map.component.html',
-  styleUrls: ['./pipe-map.component.scss']
+  templateUrl: './map.component.html',
+  styleUrls: ['./map.component.scss']
 })
-export class PipeMapComponent implements OnInit, OnDestroy {
+export class MapComponent implements OnInit, OnDestroy {
   people: any[];
   form: FormGroup;
 
