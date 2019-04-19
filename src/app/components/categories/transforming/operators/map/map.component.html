@@ -1,3 +1,5 @@
+<h1 class="text-center">Map Operator</h1>
+
 <mat-table [dataSource]="people">
   <ng-container matColumnDef="id">
     <mat-header-cell *matHeaderCellDef>ID</mat-header-cell>
@@ -18,14 +20,22 @@
   <ng-container matColumnDef="actions">
     <mat-header-cell *matHeaderCellDef></mat-header-cell>
     <mat-cell *matCellDef="let person">
-      <button mat-button (click)="editPerson(person.id)">
+      <!--<button mat-button (click)="editPerson(person.id)">
         <mat-icon>edit</mat-icon>
-      </button>
+      </button>-->
     </mat-cell>
   </ng-container>
   <mat-header-row *matHeaderRowDef="peopleColumns"></mat-header-row>
   <mat-row *matRowDef="let person; columns: peopleColumns"></mat-row>
 </mat-table>
+
+<h3 class="text-center">
+  Map operator does an action for each value from source.
+</h3>
+
+<p>
+
+</p>
 
 <!--<hr>
 
