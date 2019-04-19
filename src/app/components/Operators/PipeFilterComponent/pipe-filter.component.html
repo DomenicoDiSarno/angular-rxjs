@@ -1,0 +1,48 @@
+<h1 class="text-center">Filter Operator</h1>
+
+<mat-table [dataSource]="people">
+  <ng-container matColumnDef="id">
+    <mat-header-cell *matHeaderCellDef>ID</mat-header-cell>
+    <mat-cell *matCellDef="let person">{{person.id}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="firstname">
+    <mat-header-cell *matHeaderCellDef>Firstname</mat-header-cell>
+    <mat-cell *matCellDef="let person">{{person.firstname}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="lastname">
+    <mat-header-cell *matHeaderCellDef>Lastname</mat-header-cell>
+    <mat-cell *matCellDef="let person">{{person.lastname}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="description">
+    <mat-header-cell *matHeaderCellDef>Description</mat-header-cell>
+    <mat-cell *matCellDef="let person">{{person.description}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="actions">
+    <mat-header-cell *matHeaderCellDef></mat-header-cell>
+    <mat-cell *matCellDef="let person">
+      <button mat-button (click)="deletePerson(person.id)">
+        <mat-icon>cancel</mat-icon>
+      </button>
+    </mat-cell>
+  </ng-container>
+  <mat-header-row *matHeaderRowDef="peopleColumns"></mat-header-row>
+  <mat-row *matRowDef="let person; columns: peopleColumns"></mat-row>
+</mat-table>
+
+<br>
+
+<h3 class="text-center">
+  Filter operator returns all that items in an Observable that pass
+  the predicate function test.
+</h3>
+
+<p>
+  In this case when deleting person from table the updatedPeople Observable with
+  a new array obtained excluding all the items that has the same id as the deleted.
+</p>
+
+<pre>
+  <code [innerHTML]="code"></code>
+</pre>
+
+

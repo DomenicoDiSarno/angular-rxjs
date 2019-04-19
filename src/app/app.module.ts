@@ -15,8 +15,8 @@ import {MockDataService} from './services/mock-data.service';
 
 import { AppComponent } from './app.component';
 import {NavListComponent} from './components/NavListComponent/nav-list.component';
-import {PipeFilterComponent} from './components/PipeFilterComponent/pipe-filter.component';
-import {PipeMapComponent} from './components/PipeMapComponent/pipe-map.component';
+import {PipeFilterComponent} from './components/Operators/PipeFilterComponent/pipe-filter.component';
+import {PipeMapComponent} from './components/Operators/PipeMapComponent/pipe-map.component';
 
 @NgModule({
   declarations: [

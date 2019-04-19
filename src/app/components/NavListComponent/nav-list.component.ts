@@ -33,6 +33,22 @@ export class NavListComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.navService.currentURL.subscribe((url: string) => {
+      if (this.item.route && url) {
+        this.expanded = url.indexOf(`/${this.item.route}`) === 0;
+        this.ariaExpanded = this.expanded;
+      }
+    });
+  }
+
+  onItemSelected(item: NavItem) {
+    if (!item.children || !item.children.length) {
+      this.router.navigate([item.route]);
+      this.navService.closeNav();
+    }
+    if (item.children && item.children.length) {
+      this.expanded = !this.expanded;
+    }
   }
 
 }

@@ -1,7 +1,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {Subscription} from 'rxjs';
-import {PeopleService} from '../../services/people.service';
+import {PeopleService} from '../../../services/people.service';
 
 @Component({
   templateUrl: './pipe-map.component.html',
@@ -53,10 +53,6 @@ export class PipeMapComponent implements OnInit, OnDestroy {
     });
   }
 
-  getDemoRepository1() {
-    // this.firebaseRepositoryService.getDemoRepository1();
-  }
-
   submitForm() {
     if (this.form.invalid) {
       return;
@@ -79,9 +75,5 @@ export class PipeMapComponent implements OnInit, OnDestroy {
 
   editPerson(id) {
     console.log(id);
-  }
-
-  deletePerson(id) {
-    this.peopleService.deletePerson(id);
   }
 }

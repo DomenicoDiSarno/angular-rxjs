@@ -21,16 +21,13 @@
       <button mat-button (click)="editPerson(person.id)">
         <mat-icon>edit</mat-icon>
       </button>
-      <button mat-button (click)="deletePerson(person.id)">
-        <mat-icon>cancel</mat-icon>
-      </button>
     </mat-cell>
   </ng-container>
   <mat-header-row *matHeaderRowDef="peopleColumns"></mat-header-row>
   <mat-row *matRowDef="let person; columns: peopleColumns"></mat-row>
 </mat-table>
 
-<hr>
+<!--<hr>
 
 <div class="container">
   <form [formGroup]="form"
@@ -57,5 +54,5 @@
       Confirm your data Here
     </button>
   </form>
-</div>
+</div>-->
 

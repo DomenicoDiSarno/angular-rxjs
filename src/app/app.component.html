@@ -4,20 +4,7 @@
                (opened)="events.push('open!')"
                (closed)="events.push('close!')">
     <mat-nav-list>
-      <button mat-list-item
-              routerLinkActive="mat-accent"
-              routerLink="/filter">
-        <mat-icon>dialpad</mat-icon>
-        <span>Filter Example</span>
-      </button>
-      <button mat-list-item disabled>
-        <mat-icon>voicemail</mat-icon>
-        <span>Check voicemail</span>
-      </button>
-      <button mat-list-item>
-        <mat-icon>notifications_off</mat-icon>
-        <span>Disable alerts</span>
-      </button>
+      <nav-list *ngFor="let item of navItems" [item]="item"></nav-list>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -27,7 +14,7 @@
   </span>
       <span class="spacer"></span>
       <button mat-icon-button>
-        <mat-icon (click)="sidenav.toggle()">dialpad</mat-icon>
+        <mat-icon (click)="sidenav.toggle()">reorder</mat-icon>
       </button>
     </mat-toolbar>
     <main>

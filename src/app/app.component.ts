@@ -17,80 +17,92 @@ export class AppComponent implements OnInit {
   navItems: NavItem[] = [
     {
       displayName: 'Combinations',
-      iconName: 'recent_actors',
+      iconName: 'list',
       route: 'combinations',
-      disabled: true,
       children: [
         {
           displayName: 'combineAll',
-          route: 'combine-all'
+          iconName: 'lens',
+          route: 'combinations/combine-all',
+          disabled: true,
         },
         {
           displayName: 'combineLatest',
-          route: 'combine-latest'
+          route: 'combinations/combine-latest',
+          disabled: true,
         },
       ]
     },
     {
       displayName: 'Conditionals',
-      iconName: 'recent_actors',
+      iconName: 'list',
       route: 'conditionals',
+      disabled: true,
       children: [
 
       ]
     },
     {
       displayName: 'Creation',
-      iconName: 'recent_actors',
+      iconName: 'list',
       route: 'conditionals',
+      disabled: true,
       children: [
 
       ]
     },
     {
       displayName: 'Errors Handling',
-      iconName: 'recent_actors',
+      iconName: 'list',
       route: 'errors-handling',
+      disabled: true,
       children: [
 
       ]
     },
     {
       displayName: 'Filtering',
-      iconName: 'recent_actors',
+      iconName: 'list',
       route: 'filtering',
       children: [
-
+        {
+          displayName: 'Filter',
+          route: 'filtering/filter'
+        }
       ]
     },
     {
       displayName: 'Multicasting',
-      iconName: 'recent_actors',
+      iconName: 'list',
       route: 'multicasting',
+      disabled: true,
       children: [
 
       ]
     },
     {
       displayName: 'Subjects',
-      iconName: 'recent_actors',
+      iconName: 'list',
       route: 'subjects',
+      disabled: true,
       children: [
 
       ]
     },
     {
       displayName: 'Transformation',
-      iconName: 'recent_actors',
+      iconName: 'list',
       route: 'transformation',
+      disabled: true,
       children: [
 
       ]
     },
     {
       displayName: 'Utility',
-      iconName: 'recent_actors',
+      iconName: 'list',
       route: 'utility',
+      disabled: true,
       children: [
 
       ]
