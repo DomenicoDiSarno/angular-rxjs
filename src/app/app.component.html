@@ -1,4 +1,37 @@
-<app-header></app-header>
-<main>
-  <router-outlet></router-outlet>
-</main>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #sidenav mode="over"
+               [(opened)]="isOpen"
+               (opened)="events.push('open!')"
+               (closed)="events.push('close!')">
+    <mat-nav-list>
+      <button mat-list-item
+              routerLinkActive="mat-accent"
+              routerLink="/filter">
+        <mat-icon>dialpad</mat-icon>
+        <span>Filter Example</span>
+      </button>
+      <button mat-list-item disabled>
+        <mat-icon>voicemail</mat-icon>
+        <span>Check voicemail</span>
+      </button>
+      <button mat-list-item>
+        <mat-icon>notifications_off</mat-icon>
+        <span>Disable alerts</span>
+      </button>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+  <span>
+    <a routerLink="/">Angular RxJS Holy Bible</a>
+  </span>
+      <span class="spacer"></span>
+      <button mat-icon-button>
+        <mat-icon (click)="sidenav.toggle()">dialpad</mat-icon>
+      </button>
+    </mat-toolbar>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>
