@@ -21,10 +21,6 @@ export class PeopleService {
     return this.updatedPeople.asObservable();
   }
 
-  // Il metodo pipe viene messo prima di subscribe e
-  // permette di manipolare grazie alla funzione map i
-  // dati ottenuti dal server i quali saranno poi
-  // visibili alla funzione subscribe
   getPeople() {
     return this.httpClient.get(this.peopleURL).subscribe(
       (people: any[]) => {

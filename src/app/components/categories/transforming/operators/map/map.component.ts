@@ -2,6 +2,7 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {Subscription} from 'rxjs';
 import {PeopleService} from '../../../../../services/people.service';
+import {map} from 'rxjs/operators';
 
 @Component({
   templateUrl: './map.component.html',
@@ -22,8 +23,23 @@ export class MapComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.initForm();
     this.peopleService.getPeople();
-    this.peopleSub = this.peopleService.peopleUpdateListener().subscribe(
-      (people) => {
+    // Il metodo pipe viene messo prima di subscribe e
+    // permette di manipolare grazie alla funzione map i
+    // dati ottenuti dal server i quali saranno poi
+    // visibili alla funzione subscribe
+    this.peopleSub = this.peopleService.peopleUpdateListener().pipe(
+      map((people) => {
+        return people.map(person => {
+          return {
+            id: person.id,
+            firstname: person.firstname,
+            lastname: person.lastname,
+            description: 'Mapped data'
+          };
+        });
+      })
+    ).subscribe(
+      (people: any) => {
         this.people = people;
       }
     );
