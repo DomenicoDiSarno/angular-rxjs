@@ -11,9 +11,27 @@ import {map} from 'rxjs/operators';
 export class MapComponent implements OnInit, OnDestroy {
   people: any[];
   form: FormGroup;
+  code = `
+    this.peopleSub = this.peopleService.peopleUpdateListener().pipe(
+      map((people) => {
+        return people.map(person => {
+          return {
+            mappedID: person.id,
+            mappedFirstname: person.firstname,
+            mappedLastname: person.lastname,
+            mappedDescription: 'Mapped data: ' + person.description
+          };
+        });
+      })
+    ).subscribe(
+      (people: any) => {
+        this.people = people;
+      }
+    );
+  `;
 
   peopleColumns = [
-    'id', 'firstname', 'lastname', 'description', 'actions'
+    'id', 'firstname', 'lastname', 'description'
     ];
 
   private peopleSub: Subscription;
@@ -31,10 +49,10 @@ export class MapComponent implements OnInit, OnDestroy {
       map((people) => {
         return people.map(person => {
           return {
-            id: person.id,
-            firstname: person.firstname,
-            lastname: person.lastname,
-            description: 'Mapped data'
+            mappedID: person.id,
+            mappedFirstname: person.firstname,
+            mappedLastname: person.lastname,
+            mappedDescription: 'Mapped data: ' + person.description
           };
         });
       })

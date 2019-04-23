@@ -2,28 +2,20 @@
 
 <mat-table [dataSource]="people">
   <ng-container matColumnDef="id">
-    <mat-header-cell *matHeaderCellDef>ID</mat-header-cell>
-    <mat-cell *matCellDef="let person">{{person.id}}</mat-cell>
+    <mat-header-cell *matHeaderCellDef>Mapped ID</mat-header-cell>
+    <mat-cell *matCellDef="let person">{{person.mappedID}}</mat-cell>
   </ng-container>
   <ng-container matColumnDef="firstname">
-    <mat-header-cell *matHeaderCellDef>Firstname</mat-header-cell>
-    <mat-cell *matCellDef="let person">{{person.firstname}}</mat-cell>
+    <mat-header-cell *matHeaderCellDef>Mapped Firstname</mat-header-cell>
+    <mat-cell *matCellDef="let person">{{person.mappedFirstname}}</mat-cell>
   </ng-container>
   <ng-container matColumnDef="lastname">
-    <mat-header-cell *matHeaderCellDef>Lastname</mat-header-cell>
-    <mat-cell *matCellDef="let person">{{person.lastname}}</mat-cell>
+    <mat-header-cell *matHeaderCellDef>Mapped Lastname</mat-header-cell>
+    <mat-cell *matCellDef="let person">{{person.mappedLastname}}</mat-cell>
   </ng-container>
   <ng-container matColumnDef="description">
-    <mat-header-cell *matHeaderCellDef>Description</mat-header-cell>
-    <mat-cell *matCellDef="let person">{{person.description}}</mat-cell>
-  </ng-container>
-  <ng-container matColumnDef="actions">
-    <mat-header-cell *matHeaderCellDef></mat-header-cell>
-    <mat-cell *matCellDef="let person">
-      <!--<button mat-button (click)="editPerson(person.id)">
-        <mat-icon>edit</mat-icon>
-      </button>-->
-    </mat-cell>
+    <mat-header-cell *matHeaderCellDef>Mapped Description</mat-header-cell>
+    <mat-cell *matCellDef="let person">{{person.mappedDescription}}</mat-cell>
   </ng-container>
   <mat-header-row *matHeaderRowDef="peopleColumns"></mat-header-row>
   <mat-row *matRowDef="let person; columns: peopleColumns"></mat-row>
@@ -34,9 +26,13 @@
 </h3>
 
 <p>
-
+  The map operator is used to modifiy the response object
+  obtained from API and then passed to subscribe function.
 </p>
 
+<pre>
+  <code [innerHTML]="code"></code>
+</pre>
 <!--<hr>
 
 <div class="container">
