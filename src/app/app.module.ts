@@ -18,10 +18,12 @@ import {NavListComponent} from './components/nav-list/nav-list.component';
 import {FilterComponent} from './components/categories/filtering/operators/filter/filter.component';
 import {MapComponent} from './components/categories/transforming/operators/map/map.component';
 import {HomeComponent} from './components/home/home.component';
+import {DoTapComponent} from './components/categories/utility/operators/do-tap/do-tap.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    DoTapComponent,
     FilterComponent,
     HomeComponent,
     MapComponent,

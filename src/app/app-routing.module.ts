@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import {FilterComponent} from './components/categories/filtering/operators/filter/filter.component';
 import {HomeComponent} from './components/home/home.component';
 import {MapComponent} from './components/categories/transforming/operators/map/map.component';
+import {DoTapComponent} from './components/categories/utility/operators/do-tap/do-tap.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent, pathMatch: 'full'},
@@ -42,7 +43,7 @@ const routes: Routes = [
   },
   {path: 'utility-operators',
     children: [
-      {path: 'do-tap', component: MapComponent}
+      {path: 'do-tap', component: DoTapComponent}
     ]
   },
 ];

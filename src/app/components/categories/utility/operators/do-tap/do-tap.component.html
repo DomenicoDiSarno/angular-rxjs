@@ -1,0 +1,35 @@
+<h1 class="text-center">Do/Tap Operator</h1>
+
+<mat-table [dataSource]="people">
+  <ng-container matColumnDef="id">
+    <mat-header-cell *matHeaderCellDef>ID</mat-header-cell>
+    <mat-cell *matCellDef="let person">{{person.id}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="firstname">
+    <mat-header-cell *matHeaderCellDef>Firstname</mat-header-cell>
+    <mat-cell *matCellDef="let person">{{person.firstname}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="lastname">
+    <mat-header-cell *matHeaderCellDef>Lastname</mat-header-cell>
+    <mat-cell *matCellDef="let person">{{person.lastname}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="description">
+    <mat-header-cell *matHeaderCellDef>Description</mat-header-cell>
+    <mat-cell *matCellDef="let person">{{person.description}}</mat-cell>
+  </ng-container>
+  <mat-header-row *matHeaderRowDef="peopleColumns"></mat-header-row>
+  <mat-row *matRowDef="let person; columns: peopleColumns"></mat-row>
+</mat-table>
+
+<h3 class="text-center">
+  Transparently perform actions or side-effects, such as logging.
+</h3>
+
+<p>
+  The do(tap) operator is used to perform actions or side-effects.
+  Thi operator DOES NOT transform values.
+</p>
+
+<pre>
+  <code [innerHTML]="code"></code>
+</pre>

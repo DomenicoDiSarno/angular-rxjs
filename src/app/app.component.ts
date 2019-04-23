@@ -116,8 +116,7 @@ export class AppComponent implements OnInit {
       children: [
         {
           displayName: 'Do/Tap',
-          route: 'utility-operators/do-tap',
-          disabled: true
+          route: 'utility-operators/do-tap'
         },
       ]
     }
