@@ -19,6 +19,7 @@ import {FilterComponent} from './components/categories/filtering/operators/filte
 import {MapComponent} from './components/categories/transforming/operators/map/map.component';
 import {HomeComponent} from './components/home/home.component';
 import {DoTapComponent} from './components/categories/utility/operators/do-tap/do-tap.component';
+import {MergeMapComponent} from './components/categories/transforming/operators/merge-map/merge-map.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import {DoTapComponent} from './components/categories/utility/operators/do-tap/d
     FilterComponent,
     HomeComponent,
     MapComponent,
+    MergeMapComponent,
     NavListComponent,
   ],
   imports: [

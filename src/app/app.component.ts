@@ -100,7 +100,6 @@ export class AppComponent implements OnInit {
         {
           displayName: 'Merge Map',
           route: 'transforming-observables/merge-map',
-          disabled: true
         },
         {
           displayName: 'Switch Map',

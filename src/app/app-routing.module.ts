@@ -5,6 +5,7 @@ import {FilterComponent} from './components/categories/filtering/operators/filte
 import {HomeComponent} from './components/home/home.component';
 import {MapComponent} from './components/categories/transforming/operators/map/map.component';
 import {DoTapComponent} from './components/categories/utility/operators/do-tap/do-tap.component';
+import {MergeMapComponent} from './components/categories/transforming/operators/merge-map/merge-map.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent, pathMatch: 'full'},
@@ -37,7 +38,7 @@ const routes: Routes = [
   {path: 'transforming-observables',
     children: [
       {path: 'map', component: MapComponent},
-      {path: 'merge-map', component: MapComponent},
+      {path: 'merge-map', component: MergeMapComponent},
       {path: 'switch-map', component: MapComponent}
     ]
   },
