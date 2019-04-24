@@ -44,6 +44,9 @@ export class SwitchMapComponent implements OnInit, OnDestroy {
     );
     this.initForm();
     this.searchField.valueChanges.pipe(
+      /* La funzione switchMap richiama il metodo map dopo aver svuotato
+      * la memoria dal precedente osservabile
+      */
       switchMap((term: string) => this.people.filter(
         person => person.firstname.toLowerCase() === term.toLowerCase()
       ))
