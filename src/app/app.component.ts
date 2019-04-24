@@ -104,7 +104,6 @@ export class AppComponent implements OnInit {
         {
           displayName: 'Switch Map',
           route: 'transforming-observables/switch-map',
-          disabled: true
         },
       ]
     },

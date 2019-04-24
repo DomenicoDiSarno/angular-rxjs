@@ -6,6 +6,7 @@ import {HomeComponent} from './components/home/home.component';
 import {MapComponent} from './components/categories/transforming/operators/map/map.component';
 import {DoTapComponent} from './components/categories/utility/operators/do-tap/do-tap.component';
 import {MergeMapComponent} from './components/categories/transforming/operators/merge-map/merge-map.component';
+import {SwitchMapComponent} from './components/categories/transforming/operators/switch-map/switch-map.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent, pathMatch: 'full'},
@@ -39,7 +40,7 @@ const routes: Routes = [
     children: [
       {path: 'map', component: MapComponent},
       {path: 'merge-map', component: MergeMapComponent},
-      {path: 'switch-map', component: MapComponent}
+      {path: 'switch-map', component: SwitchMapComponent}
     ]
   },
   {path: 'utility-operators',

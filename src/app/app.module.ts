@@ -20,6 +20,7 @@ import {MapComponent} from './components/categories/transforming/operators/map/m
 import {HomeComponent} from './components/home/home.component';
 import {DoTapComponent} from './components/categories/utility/operators/do-tap/do-tap.component';
 import {MergeMapComponent} from './components/categories/transforming/operators/merge-map/merge-map.component';
+import {SwitchMapComponent} from './components/categories/transforming/operators/switch-map/switch-map.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import {MergeMapComponent} from './components/categories/transforming/operators/
     MapComponent,
     MergeMapComponent,
     NavListComponent,
+    SwitchMapComponent
   ],
   imports: [
     AppRoutingModule,

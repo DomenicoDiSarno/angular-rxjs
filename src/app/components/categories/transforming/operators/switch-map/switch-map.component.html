@@ -1,0 +1,52 @@
+<h1 class="text-center">Switch Map Operator</h1>
+
+<mat-table [dataSource]="people">
+  <ng-container matColumnDef="id">
+    <mat-header-cell *matHeaderCellDef>ID</mat-header-cell>
+    <mat-cell *matCellDef="let person">{{person.id}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="firstname">
+    <mat-header-cell *matHeaderCellDef>Firstname</mat-header-cell>
+    <mat-cell *matCellDef="let person">{{person.firstname}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="lastname">
+    <mat-header-cell *matHeaderCellDef>Lastname</mat-header-cell>
+    <mat-cell *matCellDef="let person">{{person.lastname}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="description">
+    <mat-header-cell *matHeaderCellDef>Description</mat-header-cell>
+    <mat-cell *matCellDef="let person">{{person.description}}</mat-cell>
+  </ng-container>
+  <mat-header-row *matHeaderRowDef="peopleColumns"></mat-header-row>
+  <mat-row *matRowDef="let person; columns: peopleColumns"></mat-row>
+</mat-table>
+
+<br>
+
+<div class="text-center">
+  <form [formGroup]="searchForm">
+    <input formControlName="search"
+           placeholder="Search person by name">
+  </form>
+
+  <div *ngFor="let foundPerson of foundPeople">
+    {{foundPerson | json}}
+  </div>
+</div>
+
+<br>
+
+<h3 class="text-center">
+  Switch Map operator maps to observable, completes the previous
+  inner observable, emits his values and then cancel it.
+</h3>
+
+<p>
+  The switch map operator is used when the response object
+  obtained from an observable should be replaced by another
+  one.
+</p>
+
+<pre>
+  <code [innerHTML]="code"></code>
+</pre>
