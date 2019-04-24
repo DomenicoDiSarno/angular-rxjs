@@ -7,13 +7,15 @@ import {MapComponent} from './components/categories/transforming/operators/map/m
 import {DoTapComponent} from './components/categories/utility/operators/do-tap/do-tap.component';
 import {MergeMapComponent} from './components/categories/transforming/operators/merge-map/merge-map.component';
 import {SwitchMapComponent} from './components/categories/transforming/operators/switch-map/switch-map.component';
+import {ForkJoinComponent} from './components/categories/combining/operators/fork-join/fork-join.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent, pathMatch: 'full'},
   {path: 'combining-observables',
     children: [
       {path: 'combine-all', component: FilterComponent},
-      {path: 'combine-latest', component: FilterComponent}
+      {path: 'combine-latest', component: FilterComponent},
+      {path: 'fork-join', component: ForkJoinComponent}
     ]
   },
   {path: 'conditional-boolean-operators',

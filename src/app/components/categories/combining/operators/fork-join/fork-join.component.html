@@ -1,0 +1,38 @@
+<h1 class="text-center">Fork Join Operator</h1>
+
+<br>
+
+<div class="text-center">
+  <p>
+    Insert link 1: <input type="text" [(ngModel)]="url1">
+  </p>
+
+  <p>
+    Insert link 2: <input type="text" [(ngModel)]="url2">
+  </p>
+
+  <p>
+    Insert link 3: <input type="text" [(ngModel)]="url3">
+  </p>
+
+  <button (click)="launchForkJoinExample(url1, url2, url3)">Fork Join</button>
+</div>
+
+
+
+<br>
+
+<h3 class="text-center">
+  Fork Join operator returns all last emitted values from each Observable after they're completed.
+</h3>
+
+<p>
+  In this case it has to be considered only the final emitted value from each observable.
+  If an observable it's not completed the value is not emitted.
+</p>
+
+<pre>
+  <code [innerHTML]="code"></code>
+</pre>
+
+

@@ -21,15 +21,19 @@ export class AppComponent implements OnInit {
       route: 'combining-observables',
       children: [
         {
-          displayName: 'combineAll',
+          displayName: 'Combine All',
           route: 'combining-observables/combine-all',
           disabled: true,
         },
         {
-          displayName: 'combineLatest',
+          displayName: 'Combine Latest',
           route: 'combining-observables/combine-latest',
           disabled: true,
         },
+        {
+          displayName: 'Fork Join',
+          route: 'combining-observables/fork-join'
+        }
       ]
     },
     {
