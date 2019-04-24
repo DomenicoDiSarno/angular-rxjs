@@ -42,9 +42,9 @@ export class MergeMapComponent implements OnInit {
     this.lastnameObs = Observable.fromEvent(this.lastname, 'input');
 
     this.firstnameObs.pipe(mergeMap(
-      (event1: Event) => {
+      (event1: any) => {
         return this.lastnameObs.pipe(map(
-          (event2: Event) => {
+          (event2: any) => {
             return event1.target.value + ' ' + event2.target.value;
           }
         ));
