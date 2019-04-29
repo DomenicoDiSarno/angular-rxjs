@@ -22,10 +22,14 @@ import {DoTapComponent} from './components/categories/utility/operators/do-tap/d
 import {MergeMapComponent} from './components/categories/transforming/operators/merge-map/merge-map.component';
 import {SwitchMapComponent} from './components/categories/transforming/operators/switch-map/switch-map.component';
 import {ForkJoinComponent} from './components/categories/combining/operators/fork-join/fork-join.component';
+import {CombineAllComponent} from './components/categories/combining/operators/combine-all/combine-all.component';
+import {ConcatComponent} from './components/categories/combining/operators/concat/concat.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    CombineAllComponent,
+    ConcatComponent,
     DoTapComponent,
     FilterComponent,
     ForkJoinComponent,

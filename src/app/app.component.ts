@@ -21,17 +21,21 @@ export class AppComponent implements OnInit {
       route: 'combining-observables',
       children: [
         {
-          displayName: 'Combine All',
+          displayName: 'combineAll',
           route: 'combining-observables/combine-all',
-          disabled: true,
+          disabled: true
         },
         {
-          displayName: 'Combine Latest',
+          displayName: 'combineLatest',
           route: 'combining-observables/combine-latest',
           disabled: true,
         },
         {
-          displayName: 'Fork Join',
+          displayName: 'concat',
+          route: 'combining-observables/concat'
+        },
+        {
+          displayName: 'forkJoin',
           route: 'combining-observables/fork-join'
         }
       ]
@@ -69,7 +73,7 @@ export class AppComponent implements OnInit {
       route: 'filtering-observables',
       children: [
         {
-          displayName: 'Filter',
+          displayName: 'filter',
           route: 'filtering-observables/filter'
         }
       ]
@@ -98,15 +102,15 @@ export class AppComponent implements OnInit {
       route: 'transforming-observables',
       children: [
         {
-          displayName: 'Map',
+          displayName: 'map',
           route: 'transforming-observables/map'
         },
         {
-          displayName: 'Merge Map',
+          displayName: 'mergeMap',
           route: 'transforming-observables/merge-map',
         },
         {
-          displayName: 'Switch Map',
+          displayName: 'switchMap',
           route: 'transforming-observables/switch-map',
         },
       ]
@@ -117,7 +121,7 @@ export class AppComponent implements OnInit {
       route: 'utility-operators',
       children: [
         {
-          displayName: 'Do/Tap',
+          displayName: 'do/tap',
           route: 'utility-operators/do-tap'
         },
       ]
