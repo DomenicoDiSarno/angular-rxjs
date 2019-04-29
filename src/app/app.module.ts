@@ -24,6 +24,7 @@ import {SwitchMapComponent} from './components/categories/transforming/operators
 import {ForkJoinComponent} from './components/categories/combining/operators/fork-join/fork-join.component';
 import {CombineAllComponent} from './components/categories/combining/operators/combine-all/combine-all.component';
 import {ConcatComponent} from './components/categories/combining/operators/concat/concat.component';
+import {OfComponent} from './components/categories/creating/operators/of/of.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import {ConcatComponent} from './components/categories/combining/operators/conca
     MapComponent,
     MergeMapComponent,
     NavListComponent,
+    OfComponent,
     SwitchMapComponent
   ],
   imports: [

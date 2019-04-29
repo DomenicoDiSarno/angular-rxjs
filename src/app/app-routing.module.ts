@@ -10,6 +10,7 @@ import {SwitchMapComponent} from './components/categories/transforming/operators
 import {ForkJoinComponent} from './components/categories/combining/operators/fork-join/fork-join.component';
 import {CombineAllComponent} from './components/categories/combining/operators/combine-all/combine-all.component';
 import {ConcatComponent} from './components/categories/combining/operators/concat/concat.component';
+import {OfComponent} from './components/categories/creating/operators/of/of.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent, pathMatch: 'full'},
@@ -28,7 +29,7 @@ const routes: Routes = [
   },
   {path: 'creating-observables',
     children: [
-
+      {path: 'of', component: OfComponent}
     ]
   },
   {path: 'error-handling-operators',

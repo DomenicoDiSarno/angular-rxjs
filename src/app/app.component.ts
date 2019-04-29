@@ -53,9 +53,11 @@ export class AppComponent implements OnInit {
       displayName: 'Creating Observables',
       iconName: 'list',
       route: 'creating-observables',
-      disabled: true,
       children: [
-
+        {
+          displayName: 'of',
+          route: 'creating-observables/of'
+        }
       ]
     },
     {
