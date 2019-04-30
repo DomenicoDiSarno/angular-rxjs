@@ -12,13 +12,14 @@ import {CombineAllComponent} from './components/categories/combining/operators/c
 import {ConcatComponent} from './components/categories/combining/operators/concat/concat.component';
 import {OfComponent} from './components/categories/creating/operators/of/of.component';
 import {CatchErrorComponent} from './components/categories/error/operators/catch-error/catch-error.component';
+import {CombineLatestComponent} from './components/categories/combining/operators/combine-latest/combine-latest.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent, pathMatch: 'full'},
   {path: 'combining-observables',
     children: [
       {path: 'combine-all', component: CombineAllComponent},
-      {path: 'combine-latest', component: FilterComponent},
+      {path: 'combine-latest', component: CombineLatestComponent},
       {path: 'concat', component: ConcatComponent},
       {path: 'fork-join', component: ForkJoinComponent}
     ]

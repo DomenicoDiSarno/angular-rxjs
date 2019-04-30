@@ -27,8 +27,7 @@ export class AppComponent implements OnInit {
         },
         {
           displayName: 'combineLatest',
-          route: 'combining-observables/combine-latest',
-          disabled: true,
+          route: 'combining-observables/combine-latest'
         },
         {
           displayName: 'concat',

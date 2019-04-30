@@ -26,12 +26,14 @@ import {CombineAllComponent} from './components/categories/combining/operators/c
 import {ConcatComponent} from './components/categories/combining/operators/concat/concat.component';
 import {OfComponent} from './components/categories/creating/operators/of/of.component';
 import {CatchErrorComponent} from './components/categories/error/operators/catch-error/catch-error.component';
+import {CombineLatestComponent} from './components/categories/combining/operators/combine-latest/combine-latest.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CatchErrorComponent,
     CombineAllComponent,
+    CombineLatestComponent,
     ConcatComponent,
     DoTapComponent,
     FilterComponent,
