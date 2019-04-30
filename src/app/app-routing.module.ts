@@ -11,6 +11,7 @@ import {ForkJoinComponent} from './components/categories/combining/operators/for
 import {CombineAllComponent} from './components/categories/combining/operators/combine-all/combine-all.component';
 import {ConcatComponent} from './components/categories/combining/operators/concat/concat.component';
 import {OfComponent} from './components/categories/creating/operators/of/of.component';
+import {CatchErrorComponent} from './components/categories/error/operators/catch-error/catch-error.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent, pathMatch: 'full'},
@@ -34,7 +35,7 @@ const routes: Routes = [
   },
   {path: 'error-handling-operators',
     children: [
-
+      {path: 'catch-error', component: CatchErrorComponent}
     ]
   },
   {path: 'filtering-observables',

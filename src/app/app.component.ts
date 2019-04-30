@@ -64,9 +64,11 @@ export class AppComponent implements OnInit {
       displayName: 'Error Handling Operators',
       iconName: 'list',
       route: 'error-handling-operators',
-      disabled: true,
       children: [
-
+        {
+          displayName: 'catchError',
+          route: 'error-handling-operators/catch-error'
+        }
       ]
     },
     {
