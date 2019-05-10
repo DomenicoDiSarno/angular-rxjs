@@ -1,0 +1,42 @@
+<h1 class="text-center">Combine All Operator</h1>
+
+<br>
+
+<div class="text-center">
+  <p>
+    Insert link 1: <input type="text" [(ngModel)]="url1">
+  </p>
+
+  <p>
+    Insert link 2: <input type="text" [(ngModel)]="url2">
+  </p>
+
+  <p>
+    Insert link 3: <input type="text" [(ngModel)]="url3">
+  </p>
+
+  <button (click)="combineAllExample(url1, url2, url3)">Combine Latest</button>
+</div>
+
+<br>
+
+<div class="text-center">
+  {{result | json}}
+</div>
+
+<br>
+
+<h3 class="text-center">
+  When any observable emits a value, emit the latest value from each.
+</h3>
+
+<p>
+  In this case it has to be considered only the final emitted value from each observable.
+  If an observable it's not completed the value is not emitted.
+</p>
+
+<pre>
+  <code [innerHTML]="code"></code>
+</pre>
+
+

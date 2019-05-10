@@ -22,8 +22,7 @@ export class AppComponent implements OnInit {
       children: [
         {
           displayName: 'combineAll',
-          route: 'combining-observables/combine-all',
-          disabled: true
+          route: 'combining-observables/combine-all'
         },
         {
           displayName: 'combineLatest',
