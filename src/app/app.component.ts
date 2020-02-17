@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
   events: string[] = [];
   isOpen: boolean;
 
-  @ViewChild('sidenav') sidenav: ElementRef;
+  @ViewChild('sidenav', { static: true }) sidenav: ElementRef;
 
   navItems: NavItem[] = [
     {
