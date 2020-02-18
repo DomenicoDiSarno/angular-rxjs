@@ -17,11 +17,14 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "aot": true,
             "outputPath": "dist/demo-rxjs-angular",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
+            "baseHref": "https://www.domenicodisarno.com/",
+            "deployUrl": "https://www.domenicodisarno.com/",
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -55,6 +58,10 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
                 }
               ]
             }
@@ -137,5 +144,8 @@
       }
     }
   },
-  "defaultProject": "demo-rxjs-angular"
+  "defaultProject": "demo-rxjs-angular",
+  "cli": {
+    "analytics": "b44375d5-12d4-48c9-b43c-3adb606ac551"
+  }
 }
